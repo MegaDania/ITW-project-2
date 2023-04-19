@@ -1,0 +1,405 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+#jesse {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    padding: 15px 20px;
+    color: #242935;
+    border: 1px solid #242935;
+}
+#jesse:hover {
+    background: #242935;
+    color: white;
+}
+
+.scrolled #jesse {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu {
+    position: fixed;
+    width: 100%;
+    background: black;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+main {
+    padding-top: 6rem;
+}
+
+.resume {
+    float: left;
+    color: white;
+    margin-left: 4rem;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #6F96F3;
+}
+
+img {
+    transition: transform 0.5s ease-in-out; /* встановлюємо анімацію для плавного зміщення */
+}
+
+img:hover {
+    transform: scale(1.05); /* збільшуємо масштаб зображення на 10% */
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+html {
+
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+section {
+    box-sizing: border-box;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -4rem;
+}
+
+.header .black-stripe {
+    height: 1rem;
+    background-color: #242935;
+    flex: 1;
+}
+
+.header .experience {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    background: black;
+    color: #cdcfd7;
+    width: 100%;
+    height: fit-content;
+    padding: 0 4rem;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    all: unset;
+    padding: 0.5rem;
+}
+
+nav ul li:hover {
+    color: #6F96F3;
+    cursor: pointer;
+}
+
+nav ul li a {
+    transition: transform 0.5s ease-in-out; /* встановлюємо анімацію для плавного зміщення */
+}
+
+nav ul li a:hover {
+    transform: scale(1.2); /* збільшуємо масштаб зображення на 10% */
+}
+
+
+#about {
+    background: #242935;
+    color: #cdcfd7;
+}
+
+#about .about-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#about .about-main .personal-photo {
+    flex: 2;
+}
+
+#about .about-main .personal-photo img {
+    width: 100%;
+}
+
+#about .about-main .personal-info {
+    flex: 3;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#about .about-main i {
+    width: 1.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.8em;
+}
+
+#about .about-main .qualities {
+    flex: 2;
+}
+
+#about .about-details {
+    margin: 2rem 0;
+}
+
+#about .about-details p {
+    text-indent: 1rem;
+}
+
+#educations {
+    display: flex;
+    flex-direction: column;
+}
+
+.years {
+    font-size: 0.9em;
+}
+
+
+#experience .main-block .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#experience .main-block h3 {
+    padding: 0.5rem 0;
+}
+
+#experience .main-block .job:not(:last-of-type) {
+    padding-bottom: 2rem;
+}
+
+#educations .main-block {
+    display: flex;
+    flex-direction: column;
+}
+
+#educations .school {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#educations h3 {
+    text-transform: uppercase;
+}
+#educations .main-block .school:not(:last-of-type) {
+    padding-bottom: 2rem;
+}
+
+#educations .school .info {
+    display: flex;
+    flex-direction: column;
+}
+
+#educations .school .info .name {
+}
+
+#educations .school .info .position {
+}
+
+#educations .school .info .faculty {
+}
+
+#educations .school .years {
+}
+
+#skills .main-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#skills .main-block .skill {
+    min-width: 10rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#skills .checked {
+    color: orange;
+}
+
+#interests .main-block p:not(:last-of-type) {
+    padding-bottom: 1rem;
+}
+#interests .main-block img:nth-last-of-type(even) {
+    float: right;
+    width: 30%;
+    padding-left: 1rem;
+}
+#interests .main-block img:nth-last-of-type(odd) {
+    float: left;
+    width: 30%;
+    padding-right: 1rem;
+}
+
+#coreCompetencies .main-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#coreCompetencies .main-block .category {
+    min-width: 15rem;
+    margin-bottom: 1rem ;
+}
+
+#coreCompetencies ul {
+    list-style-position: inside;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+        scroll-padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    html {
+        font-size: 14px;
+        scroll-padding-top: 4rem;
+    }
+    .resume {
+        margin-left: 1rem;
+    }
+    section {
+        padding: 1rem 1rem;
+    }
+    #menu {
+        position: fixed;
+        width: 100%;
+        background: black;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+    }
+    main {
+        padding-top: 4rem;
+    }
+    .mobile-menu-icon {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        color: white;
+        background: #000000;
+        padding: 1rem 1.5rem;
+
+    }
+    .mobile-menu-icon:hover {
+        color: #6F96F3;
+        cursor: pointer;
+    }
+    .header {
+        margin: 0 -1rem;
+    }
+    nav {
+        display: none;
+    }
+    .open nav {
+        display: block;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        left: 0;
+        padding: 0.5rem 1rem;
+    }
+    .open nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: auto;
+    }
+    .open nav ul li {
+        padding: 0.2rem 0.5rem;
+    }
+    #about .about-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #about .about-main .personal-info {
+        padding: 1rem 0;
+    }
+    #about .about-main .personal-photo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #about .about-main .personal-photo img {
+        width: 50%;
+    }
+
+    #experience .main-block .title {
+        flex-direction: column;
+    }
+    #interests .main-block img:nth-last-of-type(even), #interests .main-block img:nth-last-of-type(odd) {
+        width: 50%;
+    }
+    #educations .school {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    html {
+        font-size: 16px;
+    }
+}
