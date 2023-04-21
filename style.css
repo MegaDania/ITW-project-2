@@ -115,7 +115,7 @@ section {
     flex: 1;
 }
 
-.header .experience {
+.header h3 {
     background-color: white;
     padding: 2rem;
     text-align: center;
