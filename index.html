@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Sets the title of the webpage-->
     <title>Danylo Dubyniak</title>
+    <!--Defines the character set to be used for the webpage-->
     <meta charset="UTF-8">
+    <!--Sets the viewport properties to ensure proper scaling on different devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links to an external stylesheet-->
     <link rel="stylesheet" href="style.css">
+    <!--Link to an external stylesheet file that provides access to icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
     <script>
+        /* Declare a variable to keep track of the last scroll position*/
         var lastScroll = false;
+
+        /*When the window loads, add a scroll event listener*/
         window.addEventListener("load", () => {
             window.addEventListener("scroll", () => {
+
+                /*Check if the user has scrolled down the page*/
                 if (window.scrollY > 0) {
+
+                    /*If this is the first time the user has scrolled down,
+                    add the "scrolled" class to the root HTML element*/
                     if (lastScroll === false) {
                         document.documentElement.classList.toggle("scrolled");
                         lastScroll = true;
                     }
                 } else {
+                    /*If the user has scrolled back to the top of the page,
+                    remove the "scrolled" class from the root HTML element*/
                     if (lastScroll === true) {
                         document.documentElement.classList.toggle("scrolled");
                         lastScroll = false;
@@ -24,19 +41,27 @@
             })
         });
 
+        /*Define a function to toggle the "open" class on an HTML element with the ID "menu"
+        to show or hide navigation menu in mobile version*/
         function openMobileMenu() {
             document.getElementById("menu")?.classList.toggle("open");
         }
-
     </script>
 </head>
 <body>
+
 <header>
     <div id="menu">
+        <!--when the user click on the "logo", he is redirected to the site-->
         <div class="resume"><a href="https://megadania.github.io/ITW-project-2/">RESUME</a></div>
+
+        <!--we add the menu icon in mobile version and add onclick listener on the block with icon to show or hide menu items-->
         <div class="mobile-menu-icon" onclick="openMobileMenu()">
             <i class="fa-solid fa-bars"></i>
         </div>
+
+        <!--this is navigation menu that provides access to different sections of the site.
+        When one of them is clicked, the menu is closed in mobile version-->
         <nav onclick="openMobileMenu()">
             <ul>
                 <li><a href="#about">About</a></li>
@@ -48,8 +73,8 @@
             </ul>
         </nav>
     </div>
-
 </header>
+
 
 <main>
     <section id="about">
@@ -60,8 +85,11 @@
             <div class="personal-info">
                 <h2>Danylo Dubyniak</h2>
                 <p>Developer</p>
-                <p><i class="fa-solid fa-location-dot"></i><span>Chech Republic, Brno</span></p>
+                <!--add icons before the text-->
+                <p><i class="fa-solid fa-location-dot"></i><span>Czech Republic, Brno</span></p>
                 <p><i class="fa-solid fa-phone"></i><span>+420 721 573 777</span></p>
+                <!--make the email text a clickable link that opens new email template
+                in your mail application and fills in target address-->
                 <p><i class="fa-solid fa-envelope-open"></i><span><a href="mailto:danylo.dub@gmail.com">danylo.dub@gmail.com</a></span>
                 </p>
             </div>
@@ -95,6 +123,7 @@
     </section>
     <section id="experience">
         <div class="header">
+            <!--this class is used to add decorative stripes to headers-->
             <div class="black-stripe"></div>
             <h3>Experience</h3>
             <div class="black-stripe"></div>
@@ -200,9 +229,9 @@
                     September 2022 - present
                 </div>
             </div>
-
         </div>
     </section>
+
     <section id="skills">
         <div class="header">
             <div class="black-stripe"></div>
@@ -212,6 +241,7 @@
         <div class="main-block">
             <div class="skill">
                 <div class="name">C languages</div>
+                <!--add a five-star rating-->
                 <div class="rate">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -273,6 +303,7 @@
             </div>
         </div>
     </section>
+
     <section id="interests">
         <div class="header">
             <div class="black-stripe"></div>
@@ -375,7 +406,8 @@
     </section>
 </main>
 
-<a id="jesse" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+<!--We create a button that navigates user to the very top of the page. The title shows a tooltip when you hover over it-->
+<a id="jesse" href="#" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
 </body>
 </html>
